@@ -4,16 +4,38 @@
     <meta charset="UTF-8">
     <title>Christian's Task List</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.4/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body ng-app="myTaskApp">
-  <h1 class="center-align thinfont" >My Task List App</h1>
 
+  <div class="row">
+    <div ng-controller="mainCtrl" class="col l8 s12 offset-l2">
+
+      <h1 class="thinfont">My Task App</h1>
+      <h5 class="thinfont flow-text">A simple task application built with Angular.JS</h5>
+
+      <div style="padding-top:15px">
+        <div class="col s1  center-align" style="padding-top:15px">
+          <input ng-model="task.completed" type="checkbox" id="test5" />
+          <label for="test5"></label>
+        </div>
+        <div class="col s9" style="padding-left:0px">
+          <label style="font-size:larger;color:black">{{task.name}}</label>
+          <input ng-model="task.name" type="text" />
+
+
+        </div>
+        <div class="col s2" style="padding-top:15px">
+            <a href="" ng-click="helloWorld()"><i class="red-text fa fa-times fa-2x"></i></a>
+        </div>
+      </div>
+
+    </div> <!-- end main controller div-->
+  </div>
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.4/js/materialize.min.js"></script>
+  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.4/js/materialize.min.js"></script> -->
   <script type="text/javascript" src="scripts/app.js"></script>
-  <script type="text/javascript" src="scripts/controllers/main.js"></script>
-  <script type="text/javascript" src="scripts/services/data.js"></script>
   </body>
 </html>
